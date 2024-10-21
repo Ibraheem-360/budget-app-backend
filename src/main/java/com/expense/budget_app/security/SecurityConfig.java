@@ -61,7 +61,8 @@ public class SecurityConfig {
     @Bean
     public UrlBasedCorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(List.of("http://localhost:4200", "https://budget-app-freontend.vercel.app/"));  // Allow Angular frontend origin
+        config.setAllowedOrigins(List.of("http://localhost:4200",
+                "https://budget-app-freontend.vercel.app", "https://budget-app-backend-fte2.onrender.com"));  // Allow Angular frontend origin
         config.setAllowedHeaders(List.of("Authorization", "Content-Type"));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowCredentials(true);
